@@ -17,8 +17,12 @@ if __name__ == '__main__':
         print("reapply the hash")
     else:
         print("Respuesta Challenge 1: ", codeChallenge.challengeOne(s, testList))
+        dictTest = input("ingrese el diccionario respectivo , para el 2er challenge: ")
+        dictTest = eval(dictTest)
+        testList = dictTest["array"]
         print("Respuesta Challenge 2: ", codeChallenge.challengeTwo(s, testList))
-    testList = input("ingrese los numeros separados por , para el 3er challenge: ").split(",")
-    testList = list(map(int, testList))
-    print("Respuesta Challenge 3: ", codeChallenge.challengeThree(testList))
+        dictTest = input("ingrese diccionario respectivo , para el 3er challenge: ")
+        dictTest = eval(dictTest)
+        testList = dictTest["coins"]
+        print("Respuesta Challenge 3: ", codeChallenge.challengeThree(testList))
 
